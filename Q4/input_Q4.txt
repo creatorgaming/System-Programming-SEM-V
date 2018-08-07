@@ -1,0 +1,5 @@
+    int n = 9;
+    float dd_ = 9.0;
+    cout<<"Enter the number of the processes that you want to execute: ";
+    cin>>n;
+    //hello
