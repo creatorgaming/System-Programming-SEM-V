@@ -2,12 +2,12 @@
     int keyword_count = 0, integers_count = 0, float_count = 0;
     int identifiers_count = 0, operators_count = 0, comments_count = 0;
 %}
-KEYWORDS int|float|double|#include|printf|char|cout|class|struct|cin
+KEYWORDS int|float|double|#include|printf|char|cout|struct|cin
 INTEGERS [0-9]+
 FLOATS   [0-9]+[\.][0-9]*
 IDENTIFIERS [_A-Za-z]+[_A-Za-z0-9]*
 OPERATORS [(\-\-)(\+\+)\+\-\/\*\{\}(>=)(<=)(>>)(<<)!><;:"']
-COMMENTS  "//"
+COMMENTS  [\/][\/](.)*|[\/][\*](.)*[\*][\/]
 %%
 {KEYWORDS} {printf("\tKeyword -> %s \n", yytext);
             ++keyword_count;
