@@ -7,7 +7,7 @@ INTEGERS [0-9]+
 FLOATS   [0-9]+[\.][0-9]*
 IDENTIFIERS [_A-Za-z]+[_A-Za-z0-9]*
 OPERATORS [(\-\-)(\+\+)\+\-\/\*\{\}(>=)(<=)(>>)(<<)!><;:"']
-COMMENTS  [\/][\/](.)*|[\/][\*](.)*[\*][\/]
+COMMENTS  [\/][\/](.)*|[\/][\*](.|\n)*[\*][\/]
 %%
 {KEYWORDS} {printf("\tKeyword -> %s \n", yytext);
             ++keyword_count;
