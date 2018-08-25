@@ -335,12 +335,12 @@ static yyconst int yy_meta[26] =
 
 static yyconst short int yy_base[61] =
     {   0,
-        0,    0,  111,  112,  112,   93,   21,   21,  101,   22,
-       23,   26,   27,   25,   24,   89,  101,    0,   95,   43,
+        0,    0,  112,  113,  113,   94,   21,   21,  102,   22,
+       23,   26,   27,   25,   24,   90,  103,    0,   98,   43,
         0,   92,   42,   37,   28,   29,   47,   33,   51,   50,
        87,   93,   55,    0,   89,   53,   88,   55,   58,   63,
        57,   56,   77,   89,   62,   66,   69,   70,   67,   75,
-       76,   77,   75,   73,  112,  112,   83,  101,  104,   37
+       76,   77,   75,   73,  113,  113,   83,  101,  104,   37
     } ;
 
 static yyconst short int yy_def[61] =
@@ -353,7 +353,7 @@ static yyconst short int yy_def[61] =
        57,   57,   56,   56,   56,    0,   56,   56,   56,   56
     } ;
 
-static yyconst short int yy_nxt[138] =
+static yyconst short int yy_nxt[139] =
     {   0,
         4,    4,    5,    6,    5,    4,    7,    8,    9,    9,
         9,   10,   11,    9,   12,    9,   13,    9,    9,    9,
@@ -366,13 +366,13 @@ static yyconst short int yy_nxt[138] =
        48,   52,   21,   21,   21,   22,   55,   54,   37,   37,
        37,   53,   51,   33,   49,   21,   35,   33,   43,   21,
 
-       37,   32,   35,   32,   34,   33,   34,   31,   21,   16,
-       56,    3,   56,   56,   56,   56,   56,   56,   56,   56,
+       37,   32,   32,   32,   34,   35,   34,   33,   31,   21,
+       16,   56,    3,   56,   56,   56,   56,   56,   56,   56,
        56,   56,   56,   56,   56,   56,   56,   56,   56,   56,
-       56,   56,   56,   56,   56,   56,   56
+       56,   56,   56,   56,   56,   56,   56,   56
     } ;
 
-static yyconst short int yy_chk[138] =
+static yyconst short int yy_chk[139] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -385,10 +385,10 @@ static yyconst short int yy_chk[138] =
        42,   48,   50,   51,   52,   57,   54,   53,   50,   46,
        51,   49,   47,   44,   43,   37,   35,   32,   31,   22,
 
-       52,   58,   19,   58,   59,   17,   59,   16,    9,    6,
-        3,   56,   56,   56,   56,   56,   56,   56,   56,   56,
+       52,   58,   58,   58,   59,   19,   59,   17,   16,    9,
+        6,    3,   56,   56,   56,   56,   56,   56,   56,   56,
        56,   56,   56,   56,   56,   56,   56,   56,   56,   56,
-       56,   56,   56,   56,   56,   56,   56
+       56,   56,   56,   56,   56,   56,   56,   56
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -402,9 +402,9 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "main.l"
+#line 1 ".\\main.l"
 #define INITIAL 0
-#line 2 "main.l"
+#line 2 ".\\main.l"
     int keyword_count = 0, integers_count = 0, float_count = 0;
     int identifiers_count = 0, operators_count = 0, comments_count = 0;
 #line 411 "lex.yy.c"
@@ -558,7 +558,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 11 "main.l"
+#line 11 ".\\main.l"
 
 #line 564 "lex.yy.c"
 
@@ -617,7 +617,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 112 );
+		while ( yy_base[yy_current_state] != 113 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -645,48 +645,48 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 12 "main.l"
+#line 12 ".\\main.l"
 {printf("\tKeyword -> %s \n", yytext);
             ++keyword_count;
            }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 15 "main.l"
+#line 15 ".\\main.l"
 {printf("\tIntegers -> %s \n", yytext);
             integers_count++;
            }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 18 "main.l"
+#line 18 ".\\main.l"
 {printf("\tFloats -> %s \n", yytext);
             float_count++;
            }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 21 "main.l"
+#line 21 ".\\main.l"
 {printf("\tIdentifiers -> %s \n", yytext);
                identifiers_count++;
               }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 24 "main.l"
+#line 24 ".\\main.l"
 {printf("\tCOMMENTS -> %s \n", yytext);
             comments_count++;
             }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 27 "main.l"
+#line 27 ".\\main.l"
 {printf("\tOperators -> %s \n", yytext);
             operators_count++;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 29 "main.l"
+#line 29 ".\\main.l"
 ECHO;
 	YY_BREAK
 #line 693 "lex.yy.c"
@@ -1575,7 +1575,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 29 "main.l"
+#line 29 ".\\main.l"
 
 
 int main(){

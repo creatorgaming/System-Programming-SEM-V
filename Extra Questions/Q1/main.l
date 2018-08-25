@@ -1,14 +1,16 @@
 %{
 
 %}
+
 COMMENTS \/\/.*\n|\/\*(.|\n)*\*\/
+
 %%
 {COMMENTS} {
             printf(yytext);
-            }
-(.)   {
+           }
+(.) {
             fprintf(yyout,"%s",yytext);
-         }
+    }
 %%
 
 int main(){
